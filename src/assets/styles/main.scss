@@ -7,9 +7,8 @@ section {
   }
   &.main-section {
     display: none;
-    opacity: 0;
     position: absolute;
-    background-color: rgb(0, 0, 0);
+    background-color: transparent;
     transform: translateY(-100vh);
   }
 }
@@ -18,7 +17,7 @@ body {
   overflow: hidden;
   margin: 0;
   padding: 0;
-  font-family: "Inter", sans-serif;
+  font-family: "Karrik", sans-serif;
   background-color: black;
 }
 
@@ -27,17 +26,80 @@ body {
   color: rgb(0, 0, 0);
 }
 
-.option {
-  color: white;
-  font-size: 5.625em;
+.option-fill {
+  background-color: rgb(255, 255, 255);
+  color: black;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  text-overflow: clip;
+  overflow: hidden;
+  width: 0px;
+  top: 0;
+  transition: all 0.3s ease-in-out;
+  & p {
+    width: fit-content;
+    position: absolute;
+  }
 }
 
-.skew-container {
+.option {
+  cursor: pointer;
+  position: absolute;
+  & * {
+    cursor: pointer;
+  }
+  &:hover {
+    .option-fill {
+      width: 100%;
+    }
+  }
+  color: white;
+  display: flex;
+  font-size: 5.625em;
+  width: fit-content;
+  opacity: 0;
+  transform: matrix3d(
+    0.95,
+    0,
+    0,
+    0,
+    0,
+    0.5,
+    -0.87,
+    -0.00009,
+    0,
+    0.87,
+    0.5,
+    0,
+    0,
+    0,
+    0,
+    1
+  );
+
+  &:nth-child(1) {
+    top: 20vh;
+  }
+  &:nth-child(2) {
+    top: calc(27vh + 1em);
+  }
+  &:nth-child(3) {
+    top: calc(34vh + 2em);
+  }
+  &:nth-child(4) {
+    top: calc(41vh + 3em);
+  }
+}
+
+.skew-container,
+.skew-container-2 {
   --x-translate: 0;
   --y-translate: 0;
 
   &:hover {
-    .skew {
+    .skew,
+    .skew-2 {
       transform: matrix3d(
         1,
         0,
@@ -55,7 +117,7 @@ body {
         0,
         0,
         1
-      );
+      ) !important;
     }
   }
 }
@@ -124,10 +186,12 @@ a {
   width: 5vw;
   height: 5vw;
   color: white;
+  margin-right: 1em;
   display: flex;
   justify-content: center;
   align-items: center;
   font-size: 2em;
+  opacity: 0;
   cursor: pointer;
   transition: all 0.1s ease-in-out;
   &:hover {
