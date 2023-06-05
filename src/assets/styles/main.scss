@@ -137,6 +137,11 @@ body {
 .hero-title-1 {
   letter-spacing: 0.02em;
 }
+.heroest{
+  color: white !important;
+  font-size: 80px !important;
+  font-weight: 100;
+}
 
 .hero-title-2,
 .hero-title-3,
@@ -308,7 +313,7 @@ a {
 }
 
 .vertical-divider {
-  height: 100vh !important;
+  height: 3 00vh !important;
   width: 3px !important;
   background-color: white;
   opacity: 0.9;
@@ -321,7 +326,6 @@ a {
 }
 
 .options-list {
-  margin-top: 8%;
   height: 100vh;
   transition: filter 0.5s ease-in-out;
 }
@@ -341,15 +345,6 @@ a {
   position: fixed;
 }
 
-.volume,
-.second-volume {
-  width: 50%;
-  height: 5em;
-  canvas {
-    @extend .mx-auto;
-  }
-}
-
 .content-row {
   height: 85vh;
   display: flex;
@@ -357,7 +352,6 @@ a {
   &:nth-child(1) {
     margin-top: 7.5vh;
   }
-  border-bottom: #ffffff 3px solid;
 }
 .volume-company {
   height: 85vh;
@@ -370,6 +364,7 @@ a {
 }
 
 .exp-text {
+  opacity: 1;
   font-size: 1.5em;
   color: white;
   z-index: 100 !important;
@@ -496,13 +491,13 @@ html.has-scroll-dragging {
   right: auto;
   bottom: 0;
 }
-#logo{
+#logo {
   filter: blur(5px);
 }
-#welcome{
+#welcome {
   position: fixed;
   top: 0;
-  color:white !important;
+  color: white !important;
   left: 0;
   width: 100vw;
   height: 100vh;
@@ -510,14 +505,14 @@ html.has-scroll-dragging {
   background: #000;
 }
 
-.welcome-txt-1{
+.welcome-txt-1 {
   font-size: 2.5em;
   font-stretch: 125%;
   letter-spacing: 0.01em;
-  font-style: oblique 14deg;  line-height: 1em;
-
+  font-style: oblique 14deg;
+  line-height: 1em;
 }
-.welcome-txt-2{
+.welcome-txt-2 {
   font-stretch: 125%;
   font-size: 2.5em;
 }

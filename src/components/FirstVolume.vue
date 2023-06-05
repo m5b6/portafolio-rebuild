@@ -1,15 +1,13 @@
 <template>
   <GeneralVolumeVue
-    Id = "first-volume"
+    Id="first-volume"
     Role="> Riolab"
-    Description="Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam voluptatum, quia, quos, quod voluptate quas voluptatibus quibusdam quae voluptates doloribus quidem."
+    Description="Lideré el desarrollo frontend de distintos proyectos de Riolab, entre ellos, el desarrollo de una plataforma de gestión de emprendimientos para la Región de la Araucanía, y su respectiva página web, Araucanía Infinita."
     From="Marzo 2023"
     To="Actualidad"
-    HeaderMethod="FirstVolume()"
   ></GeneralVolumeVue>
 
   <div class="col-9 volume-company position-absolute">
-    <!-- img from picsum -->
     <div
       data-scroll
       data-scroll-speed="1"

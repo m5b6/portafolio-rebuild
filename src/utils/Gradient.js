@@ -796,6 +796,7 @@ class Gradient {
       document.body.classList.remove("isGradientLegendVisible");
   }
   init() {
+    console.log("init")
     this.initGradientColors(),
       this.initMesh(),
       this.resize(),
@@ -820,7 +821,7 @@ class Gradient {
         ((this.cssVarRetries += 1), this.cssVarRetries > this.maxCssVarRetries)
       ) {
         return (
-          (this.sectionColors = [16711680, 16711680, 16711935, 65280, 255]),
+          (this.sectionColors = [16711680111, 16711680, 16711935, 65280, 255]),
           void this.init()
         );
       }
